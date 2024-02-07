@@ -50,10 +50,8 @@ content {
 
 		&.icon-darker          { background-image: url(~/icons/icon-darker.png); }
 		&.icon-brighter        { background-image: url(~/icons/icon-brighter.png); }
-		&.icon-mission-control { background-image: url(~/icons/icon-mission-control.png); }
-		&.icon-spotlight       { background-image: url(~/icons/icon-spotlight.png); }
-		&.icon-microphone      { background-image: url(~/icons/icon-microphone.png); }
-		&.icon-moon            { background-image: url(~/icons/icon-moon.png); }
+		&.icon-mission-control { background-image: url(~/icons/icon-mission-control.png); filter: drop-shadow(0 1px 0 #f2f2f2); }
+		&.icon-app-list        { background-image: url(~/icons/icon-app-list.png); filter: drop-shadow(0 1px 0 #f2f2f2); }
 		&.icon-play-prev       { background-image: url(~/icons/icon-play-prev.png); }
 		&.icon-play-pause      { background-image: url(~/icons/icon-play-pause.png); }
 		&.icon-play-next       { background-image: url(~/icons/icon-play-next.png); }
@@ -62,13 +60,32 @@ content {
 		&.icon-volume-more     { background-image: url(~/icons/icon-volume-more.png); }
 		&.icon-eject           { background-image: url(~/icons/icon-eject.png); }
 		&.icon-backspace       { background-image: url(~/icons/icon-backspace.png); }
-		&.icon-tab             { background-image: url(~/icons/icon-tab.png); }
+		&.icon-tab             { background-image: url(~/icons/icon-tab.png); filter: drop-shadow(0 1px 0 #f0f0f0); }
 		&.icon-return          { background-image: url(~/icons/icon-return.png); }
 		&.icon-caps-lock       { background-image: url(~/icons/icon-caps-lock.png); }
 		&.icon-shift           { background-image: url(~/icons/icon-shift.png); }
 		&.icon-command         { background-image: url(~/icons/icon-command.png); }
 		&.icon-option          { background-image: url(~/icons/icon-option.png); }
 		&.icon-control         { background-image: url(~/icons/icon-control.png); }
+
+		&.icon-degree             { background-image: url(~/icons/icon-degree.png); }
+		&.icon-snake-s            { background-image: url(~/icons/icon-snake-s.png); }
+		&.icon-less-than          { background-image: url(~/icons/icon-less-than.png); }
+		&.icon-greater-than       { background-image: url(~/icons/icon-greater-than.png); }
+		&.icon-question-mark      { background-image: url(~/icons/icon-question-mark.png); }
+		&.icon-plus               { background-image: url(~/icons/icon-plus.png); }
+		&.icon-single-quote-open  { background-image: url(~/icons/icon-single-quote-open.png); }
+		&.icon-single-quote-close { background-image: url(~/icons/icon-single-quote-close.png); }
+		&.icon-chevron-up         { background-image: url(~/icons/icon-chevron-up.png); }
+		&.icon-dot-dot            { background-image: url(~/icons/icon-dot-dot.png); }
+		&.icon-star               { background-image: url(~/icons/icon-star.png); }
+		&.icon-quot-comma         { background-image: url(~/icons/icon-quot-comma.png); }
+		&.icon-semi-colon         { background-image: url(~/icons/icon-semi-colon.png); }
+		&.icon-comma              { background-image: url(~/icons/icon-comma.png); }
+		&.icon-colon              { background-image: url(~/icons/icon-colon.png); }
+		&.icon-dot                { background-image: url(~/icons/icon-dot.png); }
+		&.icon-dash               { background-image: url(~/icons/icon-dash.png); }
+		&.icon-long-dash          { background-image: url(~/icons/icon-long-dash.png); }
 	}
 
 	ul {
@@ -94,6 +111,14 @@ content {
 					padding: 22px 0 0 5px;
 				}
 
+				&:nth-child(11) { // volume mute
+					.icon-volume-mute { left: 18px; }
+				}
+
+				&:nth-child(12) { // volume less
+					.icon-volume-less { left: 17px; }
+				}
+
 				&:last-child { // eject
 					.icon-eject { top: 12px; }
 				}
@@ -102,6 +127,43 @@ content {
 
 		&:nth-child(2) {
 			li {
+				&:nth-child(1) { // ° & snake-s
+					.icon-degree { top: 6px; left: 15px; }
+					.icon-snake-s { top: auto; bottom: 7px; left: 15px; }
+				}
+
+				&[data-sup] {
+					font-size: 17px;
+					padding-top: 20px;
+
+					&:before {
+						content: attr(data-sup);
+						position: absolute;
+						top: 5px;
+						left: 0;
+						right: 0;
+						font-size: 13px;
+					}
+				}
+
+				&[data-sup="/"],
+				&[data-sup="("],
+				&[data-sup=")"] {
+					&:before {
+						top: 4px;
+					}
+				}
+
+				&:nth-child(12) {
+					.icon-question-mark { top: 7px; left: 15px; }
+					.icon-plus { top: auto; bottom: 7px; left: 15px; }
+				}
+
+				&:nth-child(13) {
+					.icon-single-quote-open { top: 7px; left: 15px; }
+					.icon-single-quote-close { top: auto; bottom: 7px; left: 15px; }
+				}
+
 				&:last-child { // backspace
 					width: 75px;
 
@@ -112,14 +174,27 @@ content {
 
 		&:nth-child(3) {
 			li {
-				&:nth-child(1) { width: 75px; } // tab
+				&:nth-child(1) { // tab
+					width: 75px;
+
+					.icon-tab { top: auto; bottom: 4px; width: 18px; }
+				}
+
+				&:nth-child(13) {
+					.icon-chevron-up { top: 7px; left: 15px; }
+					.icon-dot-dot { top: auto; bottom: 7px; left: 15px; }
+				}
+
+				&:last-child { // return
+					.icon-return { top: 29px; left: 17px; width: 18px; }
+				}
 			}
 		}
 
 		&:nth-child(4) {
 			li {
 				&:nth-child(1) { // caps lock
-					width: 86px;
+					width: 85px;
 
 					&:before {
 						content: "";
@@ -135,6 +210,11 @@ content {
 
 					.icon-caps-lock { top: auto; bottom: 5px; }
 				}
+
+				&:nth-child(13) {
+					.icon-star { top: 7px; left: 15px; }
+					.icon-quot-comma { top: auto; bottom: 7px; left: 15px; }
+				}
 			}
 		}
 
@@ -146,8 +226,26 @@ content {
 					.icon-shift { top: auto; bottom: 5px; }
 				}
 
+				&:nth-child(2) { // < & >
+					.icon-greater-than { top: 7px; left: 17px; }
+					.icon-less-than { top: auto; bottom: 7px; left: 17px; }
+				}
+
+				&[data-sup] {
+					padding-top: 18px;
+
+					&:before {
+						content: attr(data-sup);
+						position: absolute;
+						top: 5px;
+						left: 0;
+						right: 0;
+						font-size: 16px;
+					}
+				}
+
 				&:last-child { // right shift
-					width: 107px;
+					width: 106px;
 
 					.icon-shift { top: auto; left: auto; bottom: 5px; right: 5px; }
 				}
@@ -179,7 +277,7 @@ content {
 				}
 
 				&:nth-child(4) { // space
-					width: 326px;
+					width: 314px;
 				}
 
 				&:nth-child(5) { // right command
@@ -203,7 +301,7 @@ content {
 
 		li {
 			position: relative;
-			width: 46px;
+			width: 45px;
 			margin-right: 9px;
 			background: linear-gradient(#dfdfdf, #f6f7f8 85%);
 			border-radius: 4px;
@@ -239,7 +337,7 @@ content {
 					content: "";
 					position: absolute;
 					bottom: -4px;
-					left: 8px;
+					left: 7px;
 					height: 1px;
 					width: 1px;
 					z-index: 2;
