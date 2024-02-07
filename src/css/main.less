@@ -1,4 +1,5 @@
 
+
 border-radius: 7px;
 // border: 0;
 
@@ -23,13 +24,52 @@ content {
 	border: 1px solid rgba(#000,.07);
 	border-top: 0;
 	border-radius: inherit;
-	color: #6e6f71;
 	position: absolute;
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
-	padding: 10px 9px 9px;
+	padding: 11px 9px 9px;
+	color: #7f8082;
+	text-shadow: 0 1px 0 #fff;
+	font-family: "Varela Round", sans-serif;
+	font-size: 18px;
+
+
+	[class*="icon-"],
+	[class^="icon-"] {
+		position: absolute;
+		top: 5px;
+		left: 5px;
+		width: 14px;
+		height: 14px;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		filter: drop-shadow(0 1px 0 #fff);
+
+		&.icon-darker          { background-image: url(~/icons/icon-darker.png); }
+		&.icon-brighter        { background-image: url(~/icons/icon-brighter.png); }
+		&.icon-mission-control { background-image: url(~/icons/icon-mission-control.png); }
+		&.icon-spotlight       { background-image: url(~/icons/icon-spotlight.png); }
+		&.icon-microphone      { background-image: url(~/icons/icon-microphone.png); }
+		&.icon-moon            { background-image: url(~/icons/icon-moon.png); }
+		&.icon-play-prev       { background-image: url(~/icons/icon-play-prev.png); }
+		&.icon-play-pause      { background-image: url(~/icons/icon-play-pause.png); }
+		&.icon-play-next       { background-image: url(~/icons/icon-play-next.png); }
+		&.icon-volume-mute     { background-image: url(~/icons/icon-volume-mute.png); }
+		&.icon-volume-less     { background-image: url(~/icons/icon-volume-less.png); }
+		&.icon-volume-more     { background-image: url(~/icons/icon-volume-more.png); }
+		&.icon-eject           { background-image: url(~/icons/icon-eject.png); }
+		&.icon-backspace       { background-image: url(~/icons/icon-backspace.png); }
+		&.icon-tab             { background-image: url(~/icons/icon-tab.png); }
+		&.icon-return          { background-image: url(~/icons/icon-return.png); }
+		&.icon-caps-lock       { background-image: url(~/icons/icon-caps-lock.png); }
+		&.icon-shift           { background-image: url(~/icons/icon-shift.png); }
+		&.icon-command         { background-image: url(~/icons/icon-command.png); }
+		&.icon-option          { background-image: url(~/icons/icon-option.png); }
+		&.icon-control         { background-image: url(~/icons/icon-control.png); }
+	}
 
 	ul {
 		display: flex;
@@ -42,13 +82,31 @@ content {
 			height: 37px;
 
 			li {
-				&:nth-child(1) { width: 75px; } // escape
+				font-size: 11px;
+				padding-top: 22px;
+
+				[class*="icon-"],
+				[class^="icon-"] { left: 15px; }
+
+				&:nth-child(1) { // escape
+					width: 75px;
+					text-align: left;
+					padding: 22px 0 0 5px;
+				}
+
+				&:last-child { // eject
+					.icon-eject { top: 12px; }
+				}
 			}
 		}
 
 		&:nth-child(2) {
 			li {
-				&:last-child { width: 75px; }   // backspace
+				&:last-child { // backspace
+					width: 75px;
+
+					.icon-backspace { top: auto; left: auto; bottom: 5px; right: 5px; }
+				}
 			}
 		}
 
@@ -60,26 +118,86 @@ content {
 
 		&:nth-child(4) {
 			li {
-				&:nth-child(1) { width: 86px; } // caps lock
+				&:nth-child(1) { // caps lock
+					width: 86px;
+
+					&:before {
+						content: "";
+						position: absolute;
+						top: 7px;
+						left: 7px;
+						width: 4px;
+						height: 4px;
+						background: #999;
+						box-shadow: 0 1px 0 #fff;
+						border-radius: 50%;
+					}
+
+					.icon-caps-lock { top: auto; bottom: 5px; }
+				}
 			}
 		}
 
 		&:nth-child(5) {
 			li {
-				&:nth-child(1) { width: 69px; } // left shift
-				&:last-child { width: 107px; }   // right shift
+				&:nth-child(1) { // left shift
+					width: 69px;
+
+					.icon-shift { top: auto; bottom: 5px; }
+				}
+
+				&:last-child { // right shift
+					width: 107px;
+
+					.icon-shift { top: auto; left: auto; bottom: 5px; right: 5px; }
+				}
 			}
 		}
 
 		&:nth-child(6) {
 			li {
-				&:nth-child(1) { width: 75px; }  // left ctrl
-				&:nth-child(2) { width: 57px; }  // left opt
-				&:nth-child(3) { width: 63px; }  // left cmd
-				&:nth-child(4) { width: 346px; } // space
-				&:nth-child(5) { width: 63px; }  // left cmd
-				&:nth-child(6) { width: 57px; }  // left opt
-				&:last-child { width: 75px; }    // right ctrl
+				font-size: 11px;
+				padding: 31px 5px 0 5px;
+
+				&:nth-child(1) { // left control
+					width: 75px;
+					text-align: left;
+				}
+
+				&:nth-child(2) { // left option
+					width: 57px;
+					text-align: right;
+
+					.icon-option { left: auto; right: 5px; }
+				}
+
+				&:nth-child(3) { // left command
+					width: 73px;
+					text-align: right;
+
+					.icon-command { left: auto; right: 5px; }
+				}
+
+				&:nth-child(4) { // space
+					width: 326px;
+				}
+
+				&:nth-child(5) { // right command
+					width: 73px;
+					text-align: left;
+				}
+
+				&:nth-child(6) { // right option
+					width: 57px;
+					text-align: left;
+				}
+
+				&:last-child { // right control
+					width: 75px;
+					text-align: right;
+
+					.icon-control { left: auto; right: 5px; }
+				}
 			}
 		}
 
@@ -92,7 +210,9 @@ content {
 			border-bottom: 1px solid #dbdbdc;
 			box-shadow: inset 0 1px 0 #f4f5f6,
 						0 0 0 2px #888;
-			font-size: 0;
+			padding-top: 15px;
+			text-align: center;
+			// font-size: 0;
 
 			&:last-child {
 				margin-right: 0;
@@ -109,16 +229,57 @@ content {
 				box-shadow: 0 1px 0 rgba(#fff,.35);
 				pointer-events: none;
 			}
+
+			&[data-key="13"] {
+				background: linear-gradient(#dfdfdf, #e5e5e5);
+				border-radius: 4px 4px 0 4px;
+				z-index: 2;
+
+				&:before {
+					content: "";
+					position: absolute;
+					bottom: -4px;
+					left: 8px;
+					height: 1px;
+					width: 1px;
+					z-index: 2;
+					border: 2px solid #888;
+					border-radius: 0 5px 0 0;
+					border-bottom: 0;
+					border-left: 0;
+				}
+
+				&:after {
+					content: "";
+					background: #e5e5e5;
+					position: absolute;
+					top: auto;
+					left: 9px;
+					right: 0;
+					height: 3px;
+					box-shadow: none;
+					border-radius: 0;
+				}
+			}
+
+			&[data-sub="13"] {
+				background: linear-gradient(#e5e5e5, #f6f7f8 85%);
+				margin-top: -9px;
+				width: 35px;
+				border-radius: 0 0 4px 4px;
+				box-shadow: 0 0 0 2px #888;
+			}
 		}
 	}
 }
 
 
+
 /* latin */
 @font-face {
-	font-family: "Varela Round";
+	font-family: 'Varela Round';
 	font-style: normal;
 	font-weight: 400;
-	src: url("~/fonts/Varela Round.woff2") format("woff2");
+	src: url(~/fonts/Varela Round.woff2) format('woff2');
 	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
