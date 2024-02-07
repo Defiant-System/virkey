@@ -19,6 +19,7 @@ const virkey = {
 			case "window.init":
 				break;
 			case "window.keydown":
+				console.log(event);
 				window.find(`li[data-key="${event.keyCode}"]`).addClass("down");
 				if (event.keyCode === 13) window.find(`li[data-sub="${event.keyCode}"]`).addClass("down");
 				break;
