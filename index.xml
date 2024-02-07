@@ -5,10 +5,11 @@
 		<meta name="author" value="Hakan Bilgin" namespace="sys"/>
 		<meta name="license" value="AGPL-3.0"/>
 		<meta name="repository" value="https://github.com/Defiant-System/virkey"/>
-		<meta name="width" value="798"/>
+		<meta name="width" value="1201"/>
+		<!-- 798 973 1201 -->
 		<meta name="height" value="333"/>
 		<meta name="top" value="320"/>
-		<meta name="left" value="150"/>
+		<meta name="left" value="30"/>
 		<meta name="headless" value="true"/>
 		<meta name="minimize"/>
 		<meta name="maximize" value="disabled"/>
