@@ -2,6 +2,10 @@
 	<Menu name="Virtual Keyboard">
 		<Menu name="About Virtual Keyboard" shell="win -a"/>
 		<Menu type="divider"/>
+		<Menu name="Basic"/>
+		<Menu name="Extended"/>
+		<Menu name="Full"/>
+		<Menu type="divider"/>
 		<Menu name="Quit Virtual Keyboard" shell="win -c"/>
 	</Menu>
 	<Menu name="Help">
