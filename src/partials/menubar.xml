@@ -2,11 +2,15 @@
 	<Menu name="Virtual Keyboard">
 		<Menu name="About Virtual Keyboard" shell="win -a"/>
 		<Menu type="divider"/>
-		<Menu name="Basic"/>
-		<Menu name="Extended"/>
-		<Menu name="Full"/>
-		<Menu type="divider"/>
 		<Menu name="Quit Virtual Keyboard" shell="win -c"/>
+	</Menu>
+	<Menu name="Settings" for="settings">
+		<Menu name="Basic" click="set-keyboard-mode" arg="basic" check-group="board-mode" is-checked="1"/>
+		<Menu name="Extended" click="set-keyboard-mode" arg="extended" check-group="board-mode"/>
+		<Menu name="Full" click="set-keyboard-mode" arg="full" check-group="board-mode"/>
+		<Menu type="divider"/>
+		<Menu name="Light Mode" click="set-keyboard-skin" arg="light" check-group="board-skin" is-checked="1"/>
+		<Menu name="Dark Mode" click="set-keyboard-skin" arg="dark" check-group="board-skin"/>
 	</Menu>
 	<Menu name="Help">
 		<Menu name="Help" click="open-help"/>
