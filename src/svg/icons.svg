@@ -360,30 +360,30 @@
 
 	<svg id="icon-up" viewBox="0 0 14 14">
 		<style type="text/css">
-			.st0{fill:#777;stroke:#777;stroke-width:1.15;stroke-linecap:round;stroke-linejoin:round;}
+			.st0{fill:#777;stroke:#777;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;}
 		</style>
-		<polygon class="st0" points="4,9.5 10,9.5 7,4.5 "/>
+		<polygon class="st0" points="4,10.5 11,10.5 7.5,4.5"/>
 	</svg>
 
 	<svg id="icon-left" viewBox="0 0 14 14">
 		<style type="text/css">
-			.st0{fill:#777;stroke:#777;stroke-width:1.15;stroke-linecap:round;stroke-linejoin:round;}
+			.st0{fill:#777;stroke:#777;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;}
 		</style>
-		<polygon class="st0" points="9.5,10 9.5,4 4.5,7 "/>
+		<polygon class="st0" points="10.5,11 10.5,4 4.5,7.5"/>
 	</svg>
 
 	<svg id="icon-down" viewBox="0 0 14 14">
 		<style type="text/css">
-			.st0{fill:#777;stroke:#777;stroke-width:1.15;stroke-linecap:round;stroke-linejoin:round;}
+			.st0{fill:#777;stroke:#777;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;}
 		</style>
-		<polygon class="st0" points="10,4.5 4,4.5 7,9.5 "/>
+		<polygon class="st0" points="11,4.5 4,4.5 7.5,10.5"/>
 	</svg>
 
 	<svg id="icon-right" viewBox="0 0 14 14">
 		<style type="text/css">
-			.st0{fill:#777;stroke:#777;stroke-width:1.15;stroke-linecap:round;stroke-linejoin:round;}
+			.st0{fill:#777;stroke:#777;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;}
 		</style>
-		<polygon class="st0" points="4.5,4 4.5,10 9.5,7 "/>
+		<polygon class="st0" points="4.5,4 4.5,11 10.5,7.5"/>
 	</svg>
 
 	<svg id="icon-num-lock" viewBox="0 0 14 14">
