@@ -35,6 +35,28 @@ content {
 	font-family: "Varela Round", sans-serif;
 	font-size: 0;
 
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 11px;
+		right: 11px;
+		height: 1px;
+		opacity: .25;
+		background: linear-gradient(90deg, transparent, #fff, transparent);
+	}
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 11px;
+		right: 11px;
+		height: 213px;
+		opacity: .075;
+		background: radial-gradient(ellipse at top center, #fff, transparent 59%);
+	}
+
 	> div {
 		position: relative;
 		display: inline-block;
@@ -142,13 +164,13 @@ content {
 			&:nth-child(2) {
 				li {
 					&:nth-child(1) { // ° & snake-s
-						.icon-degree { top: 6px; left: 15px; }
-						.icon-snake-s { top: auto; bottom: 7px; left: 15px; }
+						.icon-degree { top: 4px; left: 15px; }
+						.icon-snake-s { top: auto; bottom: 9px; left: 15px; }
 					}
 
 					&[data-sup] {
 						font-size: 17px;
-						padding-top: 20px;
+						padding-top: 22px;
 
 						&:before {
 							content: attr(data-sup);
@@ -157,6 +179,13 @@ content {
 							left: 0;
 							right: 0;
 							font-size: 13px;
+						}
+					}
+
+					&[data-key="50"] {
+						&:before {
+							top: 6px;
+							font-size: 15px;
 						}
 					}
 
@@ -570,7 +599,7 @@ content {
 
 			span {
 				position: absolute;
-				top: 23px;
+				top: 25px;
 				right: 4px;
 				font-size: 11px;
 			}
@@ -591,17 +620,6 @@ content {
 		[class*="icon-"],
 		[class^="icon-"] {
 			filter: invert(1) brightness(1.75);
-		}
-
-		&:before {
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 11px;
-			right: 11px;
-			height: 1px;
-			opacity: .25;
-			background: linear-gradient(90deg, transparent, #fff, transparent);
 		}
 
 		ul {
