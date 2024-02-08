@@ -14,6 +14,7 @@ border-radius: 11px;
 
 
 content {
+	// REMEMBER: dark skin is at the end of this file
 	background: linear-gradient(#cacccb, #e0e0e1 7%, #c9c6c6);
 	box-shadow: inset 0 0 5px rgba(#fff,.26),
 				inset 0 1px 0 rgba(#fff,.35),
@@ -557,6 +558,75 @@ content {
 					background: linear-gradient(#e0e0e0, #e1e2e8);
 					border-bottom: 1px solid #d0d0d0;
 					box-shadow: 0 0 0 2px #888;
+				}
+			}
+		}
+	}
+
+	&[data-skin="dark"] {
+		color: #f4f5fb;
+		text-shadow: none;
+
+		[class*="icon-"],
+		[class^="icon-"] {
+			filter: invert(1) brightness(2);
+		}
+
+		ul {
+			li {
+				background: #21242c;
+				border-bottom: 0;
+				border-radius: 3px;
+				box-shadow: inset 0 1px 0 #333,
+							inset 0 -1px 0 #333,
+							0 0 0 2px #202020;
+
+				&:active,
+				&.down {
+					text-shadow: none;
+					background: #22252c;
+					box-shadow: 0 0 0 2px #202020;
+				}
+
+				&[data-key="13"] {
+					border-radius: 3px 3px 0 3px;
+					box-shadow: inset 0 1px 0 #333,
+								0 0 0 2px #202020;
+
+					&:before {
+						border-color: #202020;
+					}
+
+					&:after {
+						background: #21242c;
+					}
+				}
+			}
+
+			&:nth-child(4) {
+				li {
+					&:nth-child(1) { // caps lock
+						&:before {
+							background: #666;
+							box-shadow: none;
+						}
+					}
+
+					&[data-key="70"],
+					&[data-key="74"] {
+						&.down:before,
+						&:active:before {
+							box-shadow: inset 0 1px 0 rgba(#aaa,.1),
+										0 1px 2px rgba(#aaa,.2),
+										0 0 1px rgba(#aaa,.1);
+						}
+
+						&:before {
+							box-shadow: inset 0 1px 0 rgba(#aaa,.125),
+										0 1px 2px rgba(#aaa,.25),
+										0 0 1px rgba(#aaa,.15);
+						}
+					}
 				}
 			}
 		}
