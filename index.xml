@@ -11,7 +11,7 @@
 		<meta name="top" value="320"/>
 		<meta name="left" value="60"/>
 		<meta name="headless" value="true"/>
-		<meta name="minimize"/>
+		<meta name="minimize" value="disabled"/>
 		<meta name="maximize" value="disabled"/>
 		<meta name="resize" value="disabled"/>
 		<meta name="script" value="src/js/main.js"/>

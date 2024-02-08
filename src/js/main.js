@@ -33,7 +33,7 @@ const virkey = {
 				window.settings.setItem("settings", Self.settings);
 				break;
 			case "window.keydown":
-				console.log(event);
+				// console.log(event);
 				window.find(`li[data-key="${event.keyCode}"]`).addClass("down");
 				if (event.keyCode === 13) window.find(`li[data-sub="${event.keyCode}"]`).addClass("down");
 				break;
