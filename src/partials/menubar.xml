@@ -11,6 +11,14 @@
 		<Menu type="divider"/>
 		<Menu name="Light Mode" click="set-keyboard-skin" arg="light" check-group="board-skin" is-checked="1"/>
 		<Menu name="Dark Mode" click="set-keyboard-skin" arg="dark" check-group="board-skin"/>
+		<Menu type="divider"/>
+		<Menu name="Layout&#8230;">
+			<Menu name="English" click="set-keyboard-layout" arg="en-EN" check-group="board-layout" disabled="1"/>
+			<Menu name="Swedish" click="set-keyboard-layout" arg="sv-SE" check-group="board-layout" is-checked="1"/>
+			<Menu name="Turkish" click="set-keyboard-layout" arg="tr-TR" check-group="board-layout" disabled="1"/>
+		</Menu>
+		<Menu type="divider"/>
+		<Menu name="Quit Virtual Keyboard" shell="win -c"/>
 	</Menu>
 	<Menu name="Help">
 		<Menu name="Help" click="open-help"/>

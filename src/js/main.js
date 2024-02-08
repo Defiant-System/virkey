@@ -28,6 +28,13 @@ const virkey = {
 				if (event.keyCode === 13) window.find(`li[data-sub="${event.keyCode}"]`).removeClass("down");
 				break;
 			// custom events
+			case "set-keyboard-mode":
+				break;
+			case "set-keyboard-skin":
+				Self.content.data({ skin: event.arg });
+				break;
+			case "set-keyboard-layout":
+				break;
 			case "open-help":
 				karaqu.shell("fs -u '~/help/index.md'");
 				break;
