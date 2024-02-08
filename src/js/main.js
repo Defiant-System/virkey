@@ -4,9 +4,15 @@
 
 // default settings
 const defaultSettings = {
-	"mode": "full",
-	"skin": "light",
-	"layout": "sv-SE",
+	mode: "basic",
+	skin: "light",
+	layout: "sv-SE",
+};
+
+const widths = {
+	basic: 798,
+	extended: 973,
+	full: 1201
 };
 
 
@@ -24,6 +30,7 @@ const virkey = {
 	dispatch(event) {
 		let Self = virkey,
 			el;
+		// console.log(event);
 		switch (event.type) {
 			// system events
 			case "window.init":
@@ -36,10 +43,12 @@ const virkey = {
 				// console.log(event);
 				window.find(`li[data-key="${event.keyCode}"]`).addClass("down");
 				if (event.keyCode === 13) window.find(`li[data-sub="${event.keyCode}"]`).addClass("down");
+				if (event.keyCode === 20) window.find(`li[data-key="${event.keyCode}"]`).addClass("active").removeClass("down");
 				break;
 			case "window.keyup":
 				window.find(`li[data-key="${event.keyCode}"]`).removeClass("down");
 				if (event.keyCode === 13) window.find(`li[data-sub="${event.keyCode}"]`).removeClass("down");
+				if (event.keyCode === 20) window.find(`li[data-key="${event.keyCode}"]`).removeClass("active down");
 				break;
 			// custom events
 			case "init-settings":
@@ -51,9 +60,20 @@ const virkey = {
 						arg = Self.settings[key];
 					// call dispatch
 					Self.dispatch({ type, arg });
+					// update menus
+					window.bluePrint.selectNodes(`//*[@check-group="board-${key}"]`).map(xMenu => {
+						if (xMenu.getAttribute("arg") === arg) xMenu.setAttribute("is-checked", "1");
+						else xMenu.removeAttribute("is-checked");
+					});
 				}
+				// allow animation transitions
+				setTimeout(() => Self.content.parent().addClass("ready"));
 				break;
 			case "set-keyboard-mode":
+				// resize window
+				window.body.css({ width: widths[event.arg] });
+				// set content attribute
+				Self.content.data({ mode: event.arg });
 				// update settings
 				Self.settings.mode = event.arg;
 				break;

@@ -35,8 +35,20 @@ border-radius: 11px;
 	background: transparent;
 	overflow: visible;
 	border-radius: inherit;
-}
 
+	&.ready {
+		transition: width 150ms ease-in-out;
+
+		content {
+			transition: width 150ms ease-in-out;
+
+			.ext-1,
+			.numeric {
+				transition: opacity 150ms 150ms ease-in-out;
+			}
+		}
+	}
+}
 
 content {
 	// REMEMBER: dark skin is at the end of this file
@@ -55,6 +67,7 @@ content {
 	right: 0;
 	bottom: 0;
 	padding: 11px 9px 9px;
+	white-space: nowrap;
 	color: #7f8082;
 	text-shadow: 0 1px 0 #fff;
 	font-family: "Varela Round", sans-serif;
@@ -407,6 +420,8 @@ content {
 	}
 
 	.ext-1 {
+		opacity: 1;
+		visibility: visible;
 		margin-left: 21px;
 
 		ul {
@@ -467,6 +482,8 @@ content {
 	}
 
 	.numeric {
+		opacity: 1;
+		visibility: visible;
 		margin-left: 21px;
 
 		ul {
@@ -708,20 +725,43 @@ content {
 					&[data-key="74"] {
 						&.down:before,
 						&:active:before {
-							box-shadow: inset 0 1px 0 rgba(#aaa,.1),
-										0 1px 2px rgba(#aaa,.2),
-										0 0 1px rgba(#aaa,.1);
+							box-shadow: inset 0 1px 0 #73737360,
+										0 1px 2px #3f3f3f76,
+										0 0 1px #40404074;
 						}
 
 						&:before {
-							box-shadow: inset 0 1px 0 rgba(#aaa,.125),
-										0 1px 2px rgba(#aaa,.25),
-										0 0 1px rgba(#aaa,.15);
+							box-shadow: inset 0 1px 0 #73737380,
+										0 1px 2px #3f3f3f96,
+										0 0 1px #40404094;
 						}
 					}
 				}
 			}
 		}
+	}
+
+	&[data-mode="basic"] {
+		width: 798px;
+
+		.ext-1,
+		.numeric {
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+
+	&[data-mode="extended"] {
+		width: 973px;
+
+		.numeric {
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+
+	&[data-mode="full"] {
+		width: 1201px;
 	}
 }
 
