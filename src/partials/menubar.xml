@@ -4,13 +4,13 @@
 		<Menu type="divider"/>
 		<Menu name="Quit Virtual Keyboard" shell="win -c"/>
 	</Menu>
-	<Menu name="Settings" for="settings">
+	<Menu name="Settings" for="virkey">
 		<Menu name="Basic" click="set-keyboard-mode" arg="basic" check-group="board-mode" is-checked="1"/>
 		<Menu name="Extended" click="set-keyboard-mode" arg="extended" check-group="board-mode"/>
 		<Menu name="Full" click="set-keyboard-mode" arg="full" check-group="board-mode"/>
 		<Menu type="divider"/>
-		<Menu name="Light Mode" click="set-keyboard-skin" arg="light" check-group="board-skin" is-checked="1"/>
-		<Menu name="Dark Mode" click="set-keyboard-skin" arg="dark" check-group="board-skin"/>
+		<Menu name="Light" click="set-keyboard-skin" arg="light" check-group="board-skin" is-checked="1"/>
+		<Menu name="Dark" click="set-keyboard-skin" arg="dark" check-group="board-skin"/>
 		<Menu type="divider"/>
 		<Menu name="Layout&#8230;">
 			<Menu name="English" click="set-keyboard-layout" arg="en-EN" check-group="board-layout" disabled="1"/>
