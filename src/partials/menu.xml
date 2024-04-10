@@ -10,7 +10,7 @@
 	<Menu name="Space Grey" click="set-keyboard-skin" arg="space" check-group="board-skin"/>
 	<Menu type="divider"/>
 	<Menu name="Layout&#8230;">
-		<Menu name="English" click="set-keyboard-layout" arg="en-EN" check-group="board-layout" disabled="1"/>
+		<Menu name="English (UK)" click="set-keyboard-layout" arg="en-UK" check-group="board-layout"/>
 		<Menu name="Swedish" click="set-keyboard-layout" arg="sv-SE" check-group="board-layout" is-checked="1"/>
 		<Menu name="Turkish" click="set-keyboard-layout" arg="tr-TR" check-group="board-layout" disabled="1"/>
 	</Menu>

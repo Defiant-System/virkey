@@ -20,4 +20,6 @@
 
 		@import "src/partials/menu.xml"
 	</Head>
+
+	@import "src/partials/data.xml"
 </Application>

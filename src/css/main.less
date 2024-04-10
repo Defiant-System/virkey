@@ -137,6 +137,11 @@ content {
 		&.icon-dash               { background-image: url(~/icons/icon-dash.png); }
 		&.icon-long-dash          { background-image: url(~/icons/icon-long-dash.png); }
 
+		&.icon-slash     { background-image: url(~/icons/icon-slash.png); }
+		&.icon-backslash { background-image: url(~/icons/icon-backslash.png); }
+		&.icon-pipe      { background-image: url(~/icons/icon-pipe.png); }
+
+
 		&.icon-home      { background-image: url(~/icons/icon-home.png); }
 		&.icon-page-up   { background-image: url(~/icons/icon-page-up.png); }
 		&.icon-delete    { background-image: url(~/icons/icon-delete.png); }
@@ -210,6 +215,13 @@ content {
 						}
 					}
 
+					&[data-sup="@"] {
+						&:before {
+							top: 4px;
+							font-size: 14px;
+						}
+					}
+
 					&[data-sup="/"],
 					&[data-sup="("],
 					&[data-sup=")"] {
@@ -232,6 +244,12 @@ content {
 						width: 75px;
 
 						.icon-backspace { top: auto; left: auto; bottom: 5px; right: 5px; }
+					}
+
+					i.icon-star {
+						position: absolute;
+						top: 3px;
+						left: 15px;
 					}
 				}
 			}
@@ -316,6 +334,18 @@ content {
 										0 0 1px rgba(#000,.15);
 						}
 					}
+
+					i.icon-pipe {
+						position: absolute;
+						top: 6px;
+						left: 16px;
+					}
+
+					i.icon-backslash {
+						position: absolute;
+						top: 25px;
+						left: 16px;
+					}
 				}
 			}
 
@@ -349,6 +379,30 @@ content {
 						width: 106px;
 
 						.icon-shift { top: auto; left: auto; bottom: 5px; right: 5px; }
+					}
+
+					&[data-key="188"],
+					&[data-key="190"] {
+						padding-top: 18px;
+					}
+
+					i.icon-less-than,
+					i.icon-greater-than {
+						position: absolute;
+						top: 6px;
+						left: 16px;
+					}
+
+					i.icon-question-mark {
+						position: absolute;
+						top: 6px;
+						left: 16px;
+					}
+
+					i.icon-slash {
+						position: absolute;
+						top: 24px;
+						left: 16px;
 					}
 				}
 			}

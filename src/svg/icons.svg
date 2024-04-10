@@ -289,6 +289,27 @@
 		<circle class="st0" cx="9" cy="7" r="1"/>
 	</svg>
 
+	<svg id="icon-slash" viewBox="0 0 14 14">
+		<style type="text/css">
+			.st0{fill:none;stroke:#777;stroke-width:1.5;stroke-miterlimit:10;}
+		</style>
+		<line class="st0" x1="10" y1="1" x2="4" y2="13"/>
+	</svg>
+
+	<svg id="icon-backslash" viewBox="0 0 14 14">
+		<style type="text/css">
+			.st0{fill:none;stroke:#777;stroke-width:1.5;stroke-miterlimit:10;}
+		</style>
+		<line class="st0" x1="4" y1="1" x2="10" y2="13"/>
+	</svg>
+
+	<svg id="icon-pipe" viewBox="0 0 14 14">
+		<style type="text/css">
+			.st0{fill:none;stroke:#777;stroke-width:1.5;stroke-miterlimit:10;}
+		</style>
+		<line class="st0" x1="6.5" y1="1" x2="6.5" y2="13"/>
+	</svg>
+
 	<svg id="icon-star" viewBox="0 0 14 14">
 		<style type="text/css">
 			.st0{fill:#777;}
