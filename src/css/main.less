@@ -343,8 +343,8 @@ content {
 
 					i.icon-backslash {
 						position: absolute;
-						top: 25px;
-						left: 16px;
+						top: 26px;
+						left: 15px;
 					}
 				}
 			}
@@ -375,6 +375,19 @@ content {
 						}
 					}
 
+					&[data-sub] {
+						padding-top: 15px;
+
+						&:after {
+							content: attr(data-sub);
+							position: absolute;
+							top: 29px;
+							left: 0;
+							right: 0;
+							font-size: 21px;
+						}
+					}
+
 					&:last-child { // right shift
 						width: 106px;
 
@@ -401,8 +414,8 @@ content {
 
 					i.icon-slash {
 						position: absolute;
-						top: 24px;
-						left: 16px;
+						top: 26px;
+						left: 15px;
 					}
 				}
 			}
@@ -810,6 +823,69 @@ content {
 
 	&[data-mode="full"] {
 		width: 1201px;
+	}
+
+	&[data-layout="en-UK"] {
+		.main {
+			ul {
+				&:nth-child(2) {
+					li {
+						&[data-sup="+"] {
+							font-size: 12px;
+							padding-top: 23px;
+						}
+					}
+				}
+
+				&:nth-child(3) {
+					li {
+						&[data-sup="{"],
+						&[data-sup="}"] {
+							font-size: 14px;
+							padding-top: 27px;
+
+							&:before {
+								content: attr(data-sup);
+								position: absolute;
+								top: 5px;
+								left: 0;
+								right: 0;
+							}
+						}
+					}
+				}
+
+				&:nth-child(4) {
+					li {
+						&[data-sup=":"] {
+							font-size: 14px;
+							padding-top: 26px;
+
+							&:before {
+								content: attr(data-sup);
+								position: absolute;
+								top: 5px;
+								left: 0;
+								right: 0;
+							}
+						}
+
+						&[data-sup='"'] {
+							font-size: 15px;
+							padding-top: 26px;
+
+							&:before {
+								content: attr(data-sup);
+								position: absolute;
+								top: 7px;
+								left: 0;
+								right: 0;
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
 

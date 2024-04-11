@@ -85,6 +85,7 @@ const virkey = {
 			case "set-keyboard-layout":
 				// update settings
 				Self.settings.layout = event.arg;
+				Self.content.data({ layout: event.arg });
 
 				let xLayout = window.bluePrint.selectSingleNode(`//Layout[@id="${event.arg}"]`),
 					rows = $(`<span>${xLayout.textContent}</span>`).find("ul");

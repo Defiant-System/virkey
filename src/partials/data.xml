@@ -99,7 +99,7 @@
 			<li data-key="57" data-sup="(">9</li>
 			<li data-key="48" data-sup=")">0</li>
 			<li data-key="189" data-sup="–">-</li>
-			<li></li>
+			<li data-sup="+">=</li>
 			<li data-key="8"><i class="icon-backspace"></i></li>
 		</ul>
 		<ul>
@@ -114,8 +114,8 @@
 			<li data-key="73">I</li>
 			<li data-key="79">O</li>
 			<li data-key="80">P</li>
-			<li></li>
-			<li></li>
+			<li data-sup="{">[</li>
+			<li data-sup="}">]</li>
 			<li data-key="13"><i class="icon-return"></i></li>
 		</ul>
 		<ul>
@@ -129,8 +129,8 @@
 			<li data-key="74">J</li>
 			<li data-key="75">K</li>
 			<li data-key="76">L</li>
-			<li></li>
-			<li></li>
+			<li data-sup=":">;</li>
+			<li data-sup='"'>'</li>
 			<li>
 				<i class="icon-pipe"></i>
 				<i class="icon-backslash"></i>
@@ -139,7 +139,7 @@
 		</ul>
 		<ul>
 			<li data-key="16"><i class="icon-shift"></i></li>
-			<li></li>
+			<li data-sup="~" data-sub="`"></li>
 			<li data-key="90">Z</li>
 			<li data-key="88">X</li>
 			<li data-key="67">C</li>
