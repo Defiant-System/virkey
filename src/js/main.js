@@ -10,9 +10,16 @@ const defaultSettings = {
 };
 
 const widths = {
-	basic: 798,
-	extended: 973,
-	full: 1201
+	default: {
+		basic: 798,
+		extended: 973,
+		full: 1201
+	},
+	mech: {
+		basic: 768,
+		extended: 943,
+		full: 1169
+	}
 };
 
 
