@@ -8,6 +8,7 @@
 	<Menu name="Light" click="set-keyboard-skin" arg="light" check-group="board-skin" is-checked="1"/>
 	<Menu name="Dark" click="set-keyboard-skin" arg="dark" check-group="board-skin"/>
 	<Menu name="Space Grey" click="set-keyboard-skin" arg="space" check-group="board-skin"/>
+	<Menu name="Mechanical" click="set-keyboard-skin" arg="mech" check-group="board-skin"/>
 	<Menu type="divider"/>
 	<Menu name="Layout&#8230;">
 		<Menu name="English (UK)" click="set-keyboard-layout" arg="en-UK" check-group="board-layout"/>
