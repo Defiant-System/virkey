@@ -78,7 +78,7 @@ const virkey = {
 				break;
 			case "set-keyboard-mode":
 				// resize window
-				window.body.css({ width: widths[event.arg] });
+				window.body.css({ width: widths.default[event.arg] });
 				// set content attribute
 				Self.content.data({ mode: event.arg });
 				// update settings

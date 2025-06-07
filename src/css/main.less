@@ -45,11 +45,12 @@ content {
 	border: 1px solid rgba(#000,.07);
 	border-top: 0;
 	border-radius: inherit;
-	position: absolute;
+	display: block;
+	position: relative;
 	top: 0;
 	left: 0;
-	right: 0;
-	bottom: 0;
+	width: 973px;
+	height: 333px;
 	padding: 11px 9px 9px;
 	white-space: nowrap;
 	color: #7f8082;
@@ -831,7 +832,7 @@ content {
 			border-radius: 7px;
 
 			ul {
-				height: 48px;
+				height: 50px;
 				margin-bottom: 2px;
 
 				li {
@@ -984,7 +985,7 @@ content {
 					li:nth-child(1) .icon-caps-lock { bottom: 11px; }
 					li:last-child {
 						width: 54px;
-						margin-top: -54px;
+						margin-top: -56px;
 						border-radius: 0 5px 5px 5px;
 
 						u {
@@ -1034,6 +1035,8 @@ content {
 				position: relative;
 
 				&:nth-child(1){
+					height: 47px;
+
 					&:before {
 						content: "";
 						background: #591c87;
@@ -1041,7 +1044,7 @@ content {
 						top: -3px;
 						left: -3px;
 						right: -1px;
-						height: 154px;
+						height: 157px;
 						z-index: -1;
 						border-radius: 7px;
 					}
@@ -1049,7 +1052,7 @@ content {
 					&:after {
 						content: "";
 						position: absolute;
-						top: 151px;
+						top: 154px;
 						left: 5px;
 						right: 5px;
 						height: 1px;
@@ -1059,7 +1062,7 @@ content {
 				}
 
 				&:nth-child(4) {
-					margin-top: 51px;
+					margin-top: 54px;
 
 					&:before {
 						content: "";
@@ -1086,7 +1089,7 @@ content {
 						top: -3px;
 						left: -3px;
 						right: -1px;
-						height: 54px;
+						height: 56px;
 						z-index: -1;
 						border-radius: 7px;
 					}
@@ -1094,7 +1097,7 @@ content {
 					&:after {
 						content: "";
 						position: absolute;
-						top: 51px;
+						top: 53px;
 						left: 5px;
 						right: 5px;
 						height: 1px;
@@ -1120,10 +1123,14 @@ content {
 			}
 
 			ul {
+				&:nth-child(1){
+					height: 47px;
+				}
+
 				&:nth-child(5) {
 					li {
 						&:nth-child(4) {
-							height: 98px;
+							height: 102px;
 
 							.icon-num-enter {
 								top: 73px;
