@@ -4,7 +4,6 @@ border-radius: 11px;
 
 .win-caption-bar_ {
 	height: 100%;
-	pointer-events: none; // temp
 
 	.win-caption-title_ {
 		height: inherit;
@@ -79,7 +78,7 @@ content {
 		opacity: .075;
 		background: radial-gradient(ellipse at top center, #fff, transparent 59%);
 	}
-
+	
 	> div {
 		position: relative;
 		display: inline-block;
@@ -436,14 +435,14 @@ content {
 						width: 57px;
 						text-align: right;
 
-						.icon-option { left: auto; right: 5px; }
+						.icon-option { left: auto; right: 7px; }
 					}
 
 					&:nth-child(3) { // left command
 						width: 73px;
 						text-align: right;
 
-						.icon-command { left: auto; right: 5px; }
+						.icon-command { left: auto; right: 7px; }
 					}
 
 					&:nth-child(4) { // space
@@ -464,7 +463,7 @@ content {
 						width: 75px;
 						text-align: right;
 
-						.icon-control { left: auto; right: 5px; }
+						.icon-control { left: auto; right: 7px; }
 					}
 				}
 			}
@@ -482,7 +481,7 @@ content {
 
 				li {
 					font-size: 11px;
-					padding-top: 17px;
+					padding-top: 22px;
 				}
 			}
 
@@ -815,13 +814,18 @@ content {
 		text-shadow: none;
 		color: #7e22ce;
 
+		&[data-mode="basic"] { width: 768px; }
+		&[data-mode="extended"] { width: 943px; }
+		&[data-mode="full"] { width: 1169px; }
+
 		> div {
 			font-size: 15px;
 		}
 
 		[class*="icon-"],
 		[class^="icon-"] {
-			left: 6px;
+			top: 6px;
+			left: 7px;
 			filter: sepia(1) saturate(2) hue-rotate(225deg) brightness(0.9);
 		}
 
@@ -915,7 +919,13 @@ content {
 
 						[class*="icon-"],
 						[class^="icon-"] {
+							top: 6px;
 							left: 16px;
+						}
+
+						.icon-eject {
+							top: 14px;
+							left: 25px;
 						}
 					}
 
@@ -934,12 +944,22 @@ content {
 							font-size: 11px;
 						}
 					}
+
 					li:nth-child(1) {
+						.icon-degree { top: 6px; }
 						.icon-snake-s { bottom: 12px; }
 					}
+
 					li:nth-child(12) {
-						.icon-plus { bottom: 11px; }
+						.icon-question-mark { top: 7px; left: 15px; }
+						.icon-plus { bottom: 12px; }
 					}
+
+					li:nth-child(13) {
+						.icon-single-quote-open { top: 9px; left: 16px; }
+						.icon-single-quote-close { bottom: 6px; left: 16px; }
+					}
+
 					li:last-child {
 						width: 91px;
 
@@ -948,7 +968,7 @@ content {
 				}
 
 				&:nth-child(3) {
-					li:nth-child(1) .icon-tab { bottom: 11px; }
+					li:nth-child(1) .icon-tab { bottom: 12px; }
 					li:last-child {
 						width: 18px;
 						border-radius: 5px 0 0 5px;
@@ -959,10 +979,17 @@ content {
 
 						u {
 							right: 4px;
+							box-shadow: inset 2px -5px 5px #d07fe377;
 
 							&:after {
+								background: linear-gradient(to bottom, #e9d5ff, #eee2fb 30%, #efe3fc);
 								right: 0;
 								border-radius: 5px 0 0 5px;
+							}
+
+							.icon-return {
+								top: 41px;
+								left: 27px;
 							}
 						}
 					}
@@ -982,7 +1009,7 @@ content {
 						}
 					}
 
-					li:nth-child(1) .icon-caps-lock { bottom: 11px; }
+					li:nth-child(1) .icon-caps-lock { bottom: 12px; }
 					li:last-child {
 						width: 54px;
 						margin-top: -56px;
@@ -1002,7 +1029,7 @@ content {
 					li:nth-child(1) {
 						width: 73px;
 
-						.icon-shift { bottom: 11px; }
+						.icon-shift { bottom: 12px; }
 					}
 					li:nth-child(2) {
 						.icon-less-than {
@@ -1012,13 +1039,14 @@ content {
 					li:last-child {
 						width: 116px;
 
-						.icon-shift { bottom: 11px; right: 6px; }
+						.icon-shift { bottom: 12px; right: 7px; }
 					}
 				}
 
 				&:nth-child(6) {
 					li {
-						padding: 24px 7px 0 7px;
+						font-size: 10px;
+						padding: 27px 7px 0 7px;
 
 						&:nth-child(2) { width: 61px; }
 						&:nth-child(3) { width: 83px; }
@@ -1059,6 +1087,30 @@ content {
 						opacity: .5;
 						background: linear-gradient(90deg, transparent, #fff, transparent);
 					}
+
+					li {
+						font-size: 10px;
+						padding-top: 25px;
+					}
+				}
+
+				&:nth-child(2) {
+					li {
+						.icon-home,
+						.icon-page-up {
+							left: 17px;
+						}
+					}
+				}
+				
+				&:nth-child(3) {
+					li {
+						.icon-delete,
+						.icon-end,
+						.icon-page-down {
+							left: 17px;
+						}
+					}
 				}
 
 				&:nth-child(4) {
@@ -1078,6 +1130,10 @@ content {
 
 					li {
 						left: -4px;
+
+						.icon-up {
+							left: 17px;
+						}
 					}
 				}
 
@@ -1104,6 +1160,14 @@ content {
 						opacity: .5;
 						background: linear-gradient(90deg, transparent, #fff, transparent);
 					}
+
+					li {
+						.icon-left,
+						.icon-down,
+						.icon-right {
+							left: 17px;
+						}
+					}
 				}
 			}
 		}
@@ -1125,6 +1189,11 @@ content {
 			ul {
 				&:nth-child(1){
 					height: 47px;
+
+					li {
+						font-size: 10px;
+						padding-top: 25px;
+					}
 				}
 
 				&:nth-child(5) {

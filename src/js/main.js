@@ -9,24 +9,13 @@ const defaultSettings = {
 	layout: "sv-SE",
 };
 
-const widths = {
-	default: {
-		basic: 798,
-		extended: 973,
-		full: 1201
-	},
-	mech: {
-		basic: 768,
-		extended: 943,
-		full: 1169
-	}
-};
-
 
 const virkey = {
 	init() {
 		// fast references
 		this.content = window.find("content");
+		// window body should obey dimensions of "content"
+		window.body.css({ width: "", height: "" });
 
 		this.dispatch({ type: "init-settings" });
 
@@ -77,8 +66,6 @@ const virkey = {
 				setTimeout(() => Self.content.parent().addClass("ready"));
 				break;
 			case "set-keyboard-mode":
-				// resize window
-				window.body.css({ width: widths.default[event.arg] });
 				// set content attribute
 				Self.content.data({ mode: event.arg });
 				// update settings

@@ -1,7 +1,7 @@
 <Application>
 	<Head>
 		<meta name="id" value="virkey"/>
-		<meta name="title" value="Virtual Keyboard" version="1.22"/>
+		<meta name="title" value="Virtual Keyboard" version="1.23"/>
 		<meta name="author" value="Hakan Bilgin" namespace="sys"/>
 		<meta name="license" value="AGPL-3.0"/>
 		<meta name="repository" value="https://github.com/Defiant-System/virkey"/>
