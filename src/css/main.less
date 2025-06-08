@@ -4,6 +4,7 @@ border-radius: 11px;
 
 .win-caption-bar_ {
 	height: 100%;
+	// pointer-events: none; // todo
 
 	.win-caption-title_ {
 		height: inherit;
@@ -847,6 +848,12 @@ content {
 					box-shadow: none;
 					border-radius: 5px;
 					border-bottom: 0;
+
+					&:active,
+					&.down {
+						top: 1px;
+						filter: brightness(.95) saturate(1.25);
+					}
 
 					&:after {
 						display: none;
